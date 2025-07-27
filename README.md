@@ -22,5 +22,6 @@ A beautiful and interactive web app that visualizes how much rainwater can be tr
 
 
 ## 📸 Preview
+<img width="1896" height="860" alt="image" src="https://github.com/user-attachments/assets/48e72273-d99d-456b-a291-9cd14b90c8ca" />
 
 
