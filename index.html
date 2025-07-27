@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💧 Water Trapping Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!--  -->
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="title">💧 Rainwater Segmentation System</h1>
+      <p class="subtitle">Enter building heights to see how much rainwater can be trapped between them</p>
+    </div>
+
+    <div class="controls">
+      <div class="input-group">
+        <label for="heights">Building Heights (comma-separated)</label>
+        <input type="text" id="heights" placeholder="e.g. 0,1,0,2,1,0,1,3,2,1,2,1" value="0,1,0,2,1,0,1,3,2,1,2,1" />
+      </div>
+      <div class="button-group">
+        <button class="btn btn-primary" onclick="visualizeWater()">▶️ Visualize</button>
+        <button class="btn btn-secondary" onclick="reset()">🔄 Reset</button>
+      </div>
+    </div>
+
+    <div id="result" style="display: none;">
+      <div class="result-card">
+        <div class="result-header">
+          <h2 class="result-title">Visualization Result</h2>
+          <div class="water-counter">
+            💧 <span id="water-count">0</span> units of water trapped
+          </div>
+        </div>
+
+        <div class="visualization-area">
+          <div class="svg-container">
+            <svg id="svg-output" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#4fc3f7;stop-opacity:0.9" />
+                  <stop offset="100%" style="stop-color:#29b6f6;stop-opacity:0.7" />
+                </linearGradient>
+                <linearGradient id="waterSurfaceGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#81d4fa;stop-opacity:0.8" />
+                  <stop offset="100%" style="stop-color:#4fc3f7;stop-opacity:0.6" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div class="legend">
+            <div class="legend-item">
+              <div class="legend-color legend-building"></div>
+              <span>Buildings</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color legend-water"></div>
+              <span>Trapped Water</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
