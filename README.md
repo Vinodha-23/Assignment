@@ -19,17 +19,8 @@ A beautiful and interactive web app that visualizes how much rainwater can be tr
 
 👉 [Try It on GitHub Pages](https://vinodha-23.github.io/Assignment/)
 
-> (Replace with your actual GitHub Pages link after hosting!)
 
----
 
 ## 📸 Preview
 
-![demo](assets/demo.gif)
-
-> You can replace this with a screenshot or recording of your app in action.
-
----
-
-## 📁 Project Structure
 
